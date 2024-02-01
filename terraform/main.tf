@@ -6,7 +6,7 @@ data "azurerm_resource_group" "rg" {
 resource "azurerm_storage_account" "data" {
   name                        = var.datalake_name
   location                    = var.location
-  resource_group_name         = "rg-niharika-rajput"
+  resource_group_name         = "rg-xxx"
   account_kind                = "StorageV2"
   account_tier                = "Standard"
   account_replication_type    = "LRS"
@@ -19,11 +19,11 @@ resource "azurerm_storage_account" "data" {
 #database-server
 resource "azurerm_sql_server" "example" {
   name                         = var.server_name
-  resource_group_name          = "rg-niharika-rajput"
+  resource_group_name          = "rg-xxx"
   location                     = var.location
   version                      = "12.0"
-  administrator_login          = "Niha"
-  administrator_login_password = "Kangra@123"   #manually create a key vault
+  administrator_login          = "xx"
+  administrator_login_password = "xxxx"   #manually create a key vault
   tags = {
     environment = "development"
   }
@@ -32,7 +32,7 @@ resource "azurerm_sql_server" "example" {
 #database
 resource "azurerm_sql_database" "gp" {
   name                = var.database_name
-  resource_group_name = "rg-niharika-rajput"
+  resource_group_name = "rg-xx"
   location            = var.location
   server_name         = var.server_name
   collation           = "SQL_Latin1_General_CP1_CI_AS"
