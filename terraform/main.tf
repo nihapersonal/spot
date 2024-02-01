@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "rg" {
-  name = "rg-niharika-rajput"
+  name = "rg-xxx"
 }
 
 #datalake
